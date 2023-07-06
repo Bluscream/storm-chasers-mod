@@ -30,7 +30,13 @@ namespace StormChasers {
         }
 
         public override void OnSceneWasLoaded(int buildIndex, string sceneName) {
-            if (sceneName == "Splash" && Preferences.SkipIntros.Value) {
+            //if (sceneName == "Splash" && Preferences.SkipIntros.Value) {
+            //    SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
+            //}
+        }
+
+        public override void OnSceneWasUnloaded(int buildIndex, string sceneName) {
+            if (buildIndex == -1 && Preferences.SkipIntros.Value) {
                 SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
             }
         }
