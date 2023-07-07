@@ -4,17 +4,17 @@ using System.Runtime.InteropServices;
 using MelonLoader;
 using StormChasers;
 
-[assembly: MelonInfo(typeof(Mod), "Storm Chasers", "1.0.0", "Bluscream")]
+[assembly: MelonInfo(typeof(Mod), "StormChasers", "1.0.0", "Bluscream")]
 [assembly: MelonGame("Little Cloud Games", "Storm Chasers")]
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Storm Chasers")]
+[assembly: AssemblyTitle("StormChasers")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Storm Chasers")]
+[assembly: AssemblyProduct("StormChasers")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -25,7 +25,7 @@ using StormChasers;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d0ce196a-e8f0-48af-a72f-fb42cbbe6d88")]
+[assembly: Guid("d0ce191a-e8f0-48af-a72f-fb42cbbe6d88")]
 
 // Version information for an assembly consists of the following four values:
 //
