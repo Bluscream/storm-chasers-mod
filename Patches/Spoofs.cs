@@ -1,6 +1,4 @@
-﻿using Harmony;
-using System;
-using System.Collections;
+﻿using System;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
@@ -64,7 +62,7 @@ namespace StormChasers {
         public static readonly MethodInfo isLegit = typeof(MainUIMenu).GetMethod("isLegit", BindingFlags.NonPublic);
         static bool Postfix(bool __result) {
             if (Preferences.SpoofLegit.Value) {
-                  Mod.Log($"Spoofing MainUIMenu.isLegit()");
+                Mod.Log($"Spoofing MainUIMenu.isLegit()");
                 return true;
             }
             return __result;

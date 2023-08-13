@@ -1,5 +1,4 @@
 ﻿using SmartLocalization;
-using System;
 using System.Reflection;
 using UIWidgetsSamples;
 

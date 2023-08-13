@@ -1,8 +1,7 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using MelonLoader;
+﻿using MelonLoader;
 using StormChasers;
+using System.Reflection;
+using System.Runtime.InteropServices;
 
 [assembly: MelonInfo(typeof(Mod), "StormChasers", "0.8.2", "Bluscream")]
 [assembly: MelonGame("Little Cloud Games", "Storm Chasers")]

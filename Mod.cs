@@ -22,12 +22,12 @@ namespace StormChasers {
             Preferences.Init();
             if (Preferences.SpoofDebug.Value) GlobalValues.Instance.isDebug = true;
             Log("Testing Spoofs:");
-            try { Log($"SystemInfo.deviceUniqueIdentifier:\t{SystemInfo.deviceUniqueIdentifier}"); } catch {}
-            try { Log($"GlobalValues.isDebug:\t{GlobalValues.Instance.isDebug}"); } catch {}
-            try { Log($"MainUIMenu.isLegit():\t{isLegitPatch.isLegit.Invoke(null, new object[] { })}"); } catch {}
-            try { Log($"MainUIMenu.isModded():\t{isModdedPatch.isModded.Invoke(null, new object[] { })}"); } catch {}
-            try { Log($"MainUIMenu.DirSearch():\t{DirSearchPatch.DirSearch.Invoke(null, new object[] { })}"); } catch {}
-            try { Log($"MainUIMenu.isLatest():\t{isModdedPatch.isModded.Invoke(null, new object[] { })}"); } catch {}
+            try { Log($"SystemInfo.deviceUniqueIdentifier:\t{SystemInfo.deviceUniqueIdentifier}"); } catch { }
+            try { Log($"GlobalValues.isDebug:\t{GlobalValues.Instance.isDebug}"); } catch { }
+            try { Log($"MainUIMenu.isLegit():\t{isLegitPatch.isLegit.Invoke(null, new object[] { })}"); } catch { }
+            try { Log($"MainUIMenu.isModded():\t{isModdedPatch.isModded.Invoke(null, new object[] { })}"); } catch { }
+            try { Log($"MainUIMenu.DirSearch():\t{DirSearchPatch.DirSearch.Invoke(null, new object[] { })}"); } catch { }
+            try { Log($"MainUIMenu.isLatest():\t{isModdedPatch.isModded.Invoke(null, new object[] { })}"); } catch { }
             //try { Log($"MainUIMenu.isBeta():\t{MainUIMenu.}"); } catch { }
             if (Preferences.SpoofDebug.Value) GlobalValues.Instance.isDebug = true;
         }
