@@ -2,7 +2,7 @@
 using System.Reflection;
 using UIWidgetsSamples;
 
-namespace StormChasers {
+namespace Photon {
     [HarmonyLib.HarmonyPatch(typeof(GameOverUI), nameof(addChatText))] // , new Type[] { typeof(PhotonPlayer), typeof(string) }
     static class GameOverAddChatTextPatch {
         public static readonly MethodInfo addChatText = typeof(GameOverUI).GetMethod("addChatText", BindingFlags.NonPublic);

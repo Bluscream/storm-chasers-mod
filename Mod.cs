@@ -3,7 +3,7 @@ using System.Reflection;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace StormChasers {
+namespace Photon {
 
     internal partial class Mod : MelonMod {
         internal static AssemblyName FileInfo = typeof(Mod).Assembly.GetName();

@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace StormChasers {
+namespace Photon {
     /*
     [05:32:53.402] [Storm_Chasers] CalculateFileData "G:\SteamLibrary\steamapps\common\Storm Chasers/Storm Chasers_Data/Managed/": 63c434b864ff270ce9fef43917dc86212a6e8b9e6cbfd5a9d54aae1c5341502f
     [05:32:53.406] [Storm_Chasers] CalculateFileData "G:\SteamLibrary\steamapps\common\Storm Chasers/Storm Chasers_Data/Plugins/x86_64/": 0afaa40682693c887a168878a20848f7f3db5801dc9b75da671b39041e2e8bcf
@@ -107,7 +107,7 @@ namespace StormChasers {
 
     [HarmonyLib.HarmonyPatch(typeof(ScoreExtensions), nameof(ScoreExtensions.SetPing))]
     static class PingPatch {
-        private static Random random = new Random();
+        private static System.Random random = new System.Random();
         static bool Prefix(PhotonPlayer player, int newPing) {
             if (Preferences.SpoofPing.Value) {
                 var ping = random.Next(Preferences.SpoofedPingMin.Value, Preferences.SpoofedPingMax.Value);
@@ -118,6 +118,17 @@ namespace StormChasers {
                 return false;
             }
             return true;
+        }
+    }
+
+    [HarmonyLib.HarmonyPatch(typeof(ServerSettings), nameof(ServerSettings.AppID), methodType: HarmonyLib.MethodType.Getter)]
+    static class PhotonAppIDPatch {
+        static void Postfix(ref string __result) {
+            Mod.Log($"ServerSettings.AppID getter called: {__result}");
+            if (!string.IsNullOrWhiteSpace(Preferences.SpoofedAppID.Value)) {
+                Mod.Log($"Presenting spoofed AppID: {Preferences.SpoofedAppID.Value}");
+                __result = Preferences.SpoofedAppID.Value;
+            }
         }
     }
 }

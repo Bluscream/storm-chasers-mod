@@ -1,5 +1,5 @@
 ﻿using MelonLoader;
-using StormChasers;
+using Photon;
 using System.Reflection;
 using System.Runtime.InteropServices;
 

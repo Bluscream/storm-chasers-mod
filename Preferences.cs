@@ -1,6 +1,6 @@
 ﻿using MelonLoader;
 
-namespace StormChasers {
+namespace Photon {
     internal static class Preferences {
         public static MelonPreferences_Entry<bool> EnableLogging { get; private set; }
         public static MelonPreferences_Entry<bool> EnableDebugLogging { get; private set; }
@@ -19,6 +19,7 @@ namespace StormChasers {
         public static MelonPreferences_Entry<bool> LogChatMessages { get; private set; }
         public static MelonPreferences_Entry<bool> LogChatInfo { get; private set; }
         public static MelonPreferences_Entry<bool> LogThinkMessages { get; private set; }
+        public static MelonPreferences_Entry<string> SpoofedAppID { get; private set; }
 
         public static void Init() {
             var category = MelonPreferences.CreateCategory(baseCategoryName);
@@ -32,12 +33,13 @@ namespace StormChasers {
             SpoofDirSearch = category.CreateEntry(nameof(SpoofDirSearch), false, "Spoof MainUIMenu.DirSearch()", "DRM Shit");
             SpoofLatest = category.CreateEntry(nameof(SpoofLatest), false, "Spoof MainUIMenu.isLatest()");
             SpoofBeta = category.CreateEntry(nameof(SpoofBeta), false, "Spoof MainUIMenu.isBeta()");
-            SpoofPing = category.CreateEntry(nameof(SpoofPing), false, "Wether to enable spoofing our ping");
+            SpoofPing = category.CreateEntry(nameof(SpoofPing), false, "Spoof Ping", "Wether to enable spoofing our ping");
             SpoofedPingMin = category.CreateEntry(nameof(SpoofedPingMin), 20, "Minimal spoofed ping");
             SpoofedPingMax = category.CreateEntry(nameof(SpoofedPingMax), 50, "Maximal spoofed ping");
-            LogChatMessages = category.CreateEntry(nameof(LogChatMessages), false, "Wether to enable logging ingame chat messages");
-            LogChatInfo = category.CreateEntry(nameof(LogChatInfo), false, "Wether to enable logging ingame info messages");
-            LogThinkMessages = category.CreateEntry(nameof(LogThinkMessages), false, "Wether to enable logging ingame think messages");
+            LogChatMessages = category.CreateEntry(nameof(LogChatMessages), false, "Log Chat Messages", "Wether to enable logging ingame chat messages");
+            LogChatInfo = category.CreateEntry(nameof(LogChatInfo), false, "Log Chat Info Messages", "Wether to enable logging ingame info messages");
+            LogThinkMessages = category.CreateEntry(nameof(LogThinkMessages), false, "Log Think Messages", "Wether to enable logging ingame think messages");
+            SpoofedAppID = category.CreateEntry(nameof(SpoofedAppID), "", "Photon AppID", "Photon AppID to spoof (Leave empty to disable)");
 
             SpoofedFolderHashes = MelonPreferences.CreateCategory(spoofedFolderHashesName);
             SpoofedFolderHashes.CreateEntry("Managed/$", "63c434b864ff270ce9fef43917dc86214e15c155e8ca00134a829ce86f4049a7");
