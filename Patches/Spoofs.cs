@@ -1,5 +1,6 @@
 ﻿using Harmony;
 using System;
+using System.Collections;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
@@ -103,6 +104,22 @@ namespace StormChasers {
                 return true;
             }
             return __result;
+        }
+    }
+
+    [HarmonyLib.HarmonyPatch(typeof(ScoreExtensions), nameof(ScoreExtensions.SetPing))]
+    static class PingPatch {
+        private static Random random = new Random();
+        static bool Prefix(PhotonPlayer player, int newPing) {
+            if (Preferences.SpoofPing.Value) {
+                var ping = random.Next(Preferences.SpoofedPingMin.Value, Preferences.SpoofedPingMax.Value);
+                Mod.LogDebug($"Spoofing ping from {newPing} to {ping}");
+                var hashtable = new ExitGames.Client.Photon.Hashtable();
+                hashtable["ping"] = ping;
+                player.SetCustomProperties(hashtable, null, false);
+                return false;
+            }
+            return true;
         }
     }
 }
