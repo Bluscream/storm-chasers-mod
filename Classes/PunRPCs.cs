@@ -10,9 +10,7 @@ namespace StormChasers.Classes {
         //base.photonView.RPC("askForBestPhotoScores", PhotonTargets.All);
         //base.photonView.RPC("breakWindows", PhotonTargets.All, true);
         //base.photonView.RPC("changeCategory", PhotonTargets.All, newCategoryModifier, tornadoCategory);
-        //base.photonView.RPC("changeCategory", PhotonTargets.All, newCategoryModifier, tornadoCategory);
         //base.photonView.RPC("changeTransportingState", PhotonTargets.All, true);
-        //base.photonView.RPC("Chat", PhotonTargets.All, inputLine);
         //base.photonView.RPC("Chat", PhotonTargets.All, inputLine);
         //base.photonView.RPC("ColorRpc", PhotonTargets.AllBufferedViaServer, vector);
         //base.photonView.RPC("DestroyRpc", PhotonTargets.AllBuffered);
@@ -32,8 +30,6 @@ namespace StormChasers.Classes {
         //base.photonView.RPC("retrieveCarTeam", base.photonView.owner);
         //base.photonView.RPC("retrievePodInfo", base.photonView.owner);
         //base.photonView.RPC("sendTopPhoto", topPhotoAuthors[key], num5, 3);
-        //base.photonView.RPC("sendTopPhoto", topPhotoAuthors[num], num2, 1);
-        //base.photonView.RPC("sendTopPhoto", topPhotoAuthors[num3], num4, 2);
         //base.photonView.RPC("startRepairingHouse", PhotonTargets.All);
         //base.photonView.RPC("toggleHomeDoor", PhotonTargets.Others, i, eulerAngle);
         //base.photonView.RPC("toRun", PhotonTargets.All, true);
