@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace Photon {
+namespace StormChasers {
     /*
     [05:32:53.402] [Storm_Chasers] CalculateFileData "G:\SteamLibrary\steamapps\common\Storm Chasers/Storm Chasers_Data/Managed/": 63c434b864ff270ce9fef43917dc86212a6e8b9e6cbfd5a9d54aae1c5341502f
     [05:32:53.406] [Storm_Chasers] CalculateFileData "G:\SteamLibrary\steamapps\common\Storm Chasers/Storm Chasers_Data/Plugins/x86_64/": 0afaa40682693c887a168878a20848f7f3db5801dc9b75da671b39041e2e8bcf

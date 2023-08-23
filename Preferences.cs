@@ -1,6 +1,6 @@
 ﻿using MelonLoader;
 
-namespace Photon {
+namespace StormChasers {
     internal static class Preferences {
         public static MelonPreferences_Entry<bool> EnableLogging { get; private set; }
         public static MelonPreferences_Entry<bool> EnableDebugLogging { get; private set; }

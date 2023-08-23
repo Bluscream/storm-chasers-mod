@@ -64,8 +64,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\PunRPCs.cs" />
     <Compile Include="Mod.cs" />
     <Compile Include="Patches\Chat.cs" />
+    <Compile Include="Patches\Photon.cs" />
     <Compile Include="Patches\Spoofs.cs" />
     <Compile Include="Preferences.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
